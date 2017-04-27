@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Support annotation -->
+	<context:annotation-config />
+	
 	<!-- Здесь должны находиться объявления компонентов -->
 
 	<bean id="duke" class="com.springinaction.springidol.Juggler">
@@ -20,12 +24,10 @@ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 		factory-method="getInstance" />
 
 	<bean id="saxophone" class="com.springinaction.springidol.Saxophone" />
+	<bean id="guitar" class="com.springinaction.springidol.Guitar" />
 
 	<bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
 		<property name="song" value="Jingle Bells" />
-		<property name="instrument">
-			<bean class="com.springinaction.springidol.Saxophone" />
-		</property>
 	</bean>
 
 </beans>

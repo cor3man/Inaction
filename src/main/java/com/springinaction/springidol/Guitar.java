@@ -3,11 +3,10 @@ package com.springinaction.springidol;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Saxophone implements Instrument {
-	public Saxophone() {
-	}
+public class Guitar implements Instrument{
 
 	public void play() {
-		System.out.println("TOOT TOOT TOOT");
+		System.out.println("Brin brin brin");
 	}
+
 }
